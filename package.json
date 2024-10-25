@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "start": "node -e \"require('http').createServer((req, res) => require('fs').readFile('.' + (req.url === '/' ? '/app.html' : req.url), (err, data) => { if (err) { res.writeHead(404); res.end(JSON.stringify(err)); return; } res.writeHead(200); res.end(data); })).listen(8080, () => console.log('Server running on http://localhost:8080'))\""
+  }
+}
