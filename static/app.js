@@ -12,7 +12,6 @@ function Navbar() {
     );
 }
 
-
 // SummaryInfoItem component
 function SummaryInfoItem({ digitalValue, labelValue }) {
     return (
@@ -22,7 +21,6 @@ function SummaryInfoItem({ digitalValue, labelValue }) {
         </div>
     );
 }
-
 
 // SummaryInfo component with responsive layout
 function SummaryInfo() {
@@ -46,7 +44,6 @@ function SummaryInfo() {
     );
 }
 
-
 // SummarySection component
 function SummarySection() {
     const today = new Date();
@@ -62,18 +59,16 @@ function SummarySection() {
     );
 }
 
-
-
 // OrgCard component with "More" button
-function OrgCard({ name, description, thumbnailUrl, nextCleanupDate }) {
+function OrgCard({ name, description, thumbnailUrl, cleanupType, cleanupDate, onSelect }) {
     return (
         <div className="org-card">
             <div className="org-card-content">
                 <div className="org-card-text">
                     <h3>{name}</h3>
                     <p>{description}</p>
-                    <p className="next-cleanup">
-                        Next clean up: <strong>{nextCleanupDate}</strong>
+                    <p className={cleanupType === "Last clean up" ? "last-cleanup" : "next-cleanup"}>
+                        {cleanupType}: <strong>{cleanupDate}</strong>
                     </p>
                 </div>
                 <div className="org-card-thumbnail">
@@ -81,15 +76,14 @@ function OrgCard({ name, description, thumbnailUrl, nextCleanupDate }) {
                 </div>
             </div>
             <div className="org-card-button-container">
-                <button className="more-btn">More</button>
+                <button className="more-btn" onClick={onSelect}>More</button>
             </div>
         </div>
     );
 }
 
-
-// OrgContainer component with responsive layout
-function OrgContainer() {
+// OrgContainer component with responsive layout and dynamic dates
+function OrgContainer({ onOrgSelect }) {
     const [isNarrow, setIsNarrow] = React.useState(window.innerWidth < 777);
 
     React.useEffect(() => {
@@ -101,46 +95,60 @@ function OrgContainer() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const currentDate = new Date();
+    const cleanupDates = [
+        new Date(currentDate.getFullYear(), 3, 15),  // April 15
+        new Date(currentDate.getFullYear(), 6, 20),  // July 20
+        new Date(currentDate.getFullYear(), 10, 10), // November 10
+        new Date(currentDate.getFullYear(), 11, 5)   // December 5
+    ];
+
+    const formatDate = (date) => {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    };
+
+    const getCleanupInfo = (date) => {
+        if (date < currentDate) {
+            return { type: "Last clean up", date: formatDate(date) };
+        } else {
+            return { type: "Next clean up", date: formatDate(date) };
+        }
+    };
 
     return (
         <div className={`org-container ${isNarrow ? 'vertical' : 'horizontal'}`}>
-            <OrgCard 
-                name="Org 1" 
-                description="Description for Org 1" 
-                thumbnailUrl="static/logo1.jpeg"
-                nextCleanupDate="April 20, 2023"
-            />
-            <OrgCard 
-                name="Org 2" 
-                description="Description for Org 2" 
-                thumbnailUrl="static/logo2.jpeg"
-                nextCleanupDate="May 5, 2023"
-            />
-            <OrgCard 
-                name="Org 3" 
-                description="Description for Org 3" 
-                thumbnailUrl="static/logo3.jpeg"
-                nextCleanupDate="May 15, 2023"
-            />
-            <OrgCard 
-                name="Org 4" 
-                description="Description for Org 4" 
-                thumbnailUrl="static/logo4.jpeg"
-                nextCleanupDate="May 25, 2023"
-            />
+            {cleanupDates.map((date, index) => {
+                const cleanupInfo = getCleanupInfo(date);
+                const org = {
+                    name: `Org ${index + 1}`,
+                    description: `Description for Org ${index + 1}`,
+                    thumbnailUrl: `static/logo${index + 1}.jpeg`,
+                    cleanupType: cleanupInfo.type,
+                    cleanupDate: cleanupInfo.date
+                };
+                return (
+                    <OrgCard 
+                        key={index}
+                        {...org}
+                        onSelect={() => onOrgSelect(org)}
+                    />
+                );
+            })}
         </div>
     );
 }
 
 // Main section component
-function MainSection() {
+function MainSection({ onOrgSelect }) {
     return (
         <section className="main">
             <h2 className="centerdH2">Organizations</h2>
-            <OrgContainer />
+            <OrgContainer onOrgSelect={onOrgSelect} />
         </section>
     );
 }
+
 
 // Footer section component
 function FooterSection() {
@@ -151,15 +159,42 @@ function FooterSection() {
     );
 }
 
+// OrgInfoComponent
+function OrgInfoComponent({ org, onBack }) {
+    console.log("Rendering OrgInfoComponent with org:", org);  // Add this line
+    return (
+        <div className="org-info">
+            <button className="back-btn" onClick={onBack}>Back</button>
+            <h2>{org.name}</h2>
+            <img src={org.thumbnailUrl} alt={org.name} className="org-info-image" />
+            <p>{org.description}</p>
+            <p className={org.cleanupType === "Last clean up" ? "last-cleanup" : "next-cleanup"}>
+                {org.cleanupType}: <strong>{org.cleanupDate}</strong>
+            </p>
+            {/* Add more details as needed */}
+        </div>
+    );
+}
+
 
 // Main App component
 function App() {
+    const [selectedOrg, setSelectedOrg] = React.useState(null);
+
+    console.log("Selected Org:", selectedOrg);  // Add this line
+
     return (
         <div className="app">
             <Navbar />
             <div className="content-wrapper">
-                <SummarySection />
-                <MainSection />
+                {selectedOrg ? (
+                    <OrgInfoComponent org={selectedOrg} onBack={() => setSelectedOrg(null)} />
+                ) : (
+                    <div>
+                        <SummarySection />
+                        <MainSection onOrgSelect={setSelectedOrg} />
+                    </div>
+                )}
             </div>
             <FooterSection />
         </div>

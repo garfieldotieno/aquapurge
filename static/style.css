@@ -203,7 +203,12 @@ footer {
     color: #007bff;
 }
 
-.next-cleanup strong {
+.last-cleanup {
+    font-style: italic;
+    color: #28a745;  /* Green color for past cleanups */
+}
+
+.next-cleanup strong, .last-cleanup strong {
     font-weight: bold;
 }
 
@@ -258,4 +263,40 @@ footer {
 .more-btn:hover {
     background-color: #0056b3;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.org-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;  /* Light gray background */
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.back-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+.org-info-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
