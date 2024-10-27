@@ -24,8 +24,41 @@ body {
 
 .navbar {
     background-color: #ffffff;
-    padding: 10px 0;
-    border-bottom: 2px solid #333;
+    padding: 10px 20px;
+    border-bottom: 2px solid #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    margin-left: 20px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;   
+}
+
+
+.navbar-donate {
+    margin-right: 20px;
+}
+
+.donate-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.donate-btn:hover {
+    background-color: #0056b3;
 }
 
 .navbar ul {
@@ -62,17 +95,18 @@ header {
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 footer {
     flex-shrink: 0;
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
 }
 
-.summary_header {
+.centerdH2 {
     text-align: center;
 }
 
@@ -109,4 +143,119 @@ footer {
 .label-value {
     font-size: 14px;
     color: #666;
+}
+
+.org-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.org-container.horizontal {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.org-container.vertical {
+    flex-direction: column;
+    align-items: center;
+}
+
+.org-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.org-container.vertical .org-card {
+    width: 80%;
+    max-width: 300px;
+}
+
+.org-card-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.org-card-text {
+    flex: 1;
+    padding-right: 15px;
+}
+
+.org-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.org-card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.next-cleanup {
+    font-style: italic;
+    color: #007bff;
+}
+
+.next-cleanup strong {
+    font-weight: bold;
+}
+
+.org-card-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.set-reminder-btn {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.set-reminder-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.org-card-thumbnail {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.org-card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.more-btn {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+}
+
+
+.more-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
