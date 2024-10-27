@@ -1,0 +1,377 @@
+{
+  "orgCards": [
+    {
+        "id": 1,
+        "name": "Ocean Cleanup Initiative",
+        "description": "Dedicated to removing plastic waste from our oceans and preventing marine pollution through innovative cleanup systems.",
+        "thumbnailUrl": "static/logo1.jpeg",
+        "cleanupDates": [
+          {
+            "date": "2024-04-15",
+            "location": "Pacific Beach",
+            "expectedParticipants": 50
+          },
+          {
+            "date": "2024-07-20",
+            "location": "Coastal Bay Area",
+            "expectedParticipants": 75
+          }
+        ],
+        "detailedInfo": {
+          "mission": "To clean and protect our oceans for future generations",
+          "impact": "Removed over 500kg of plastic waste in 2023",
+          "location_description": "San Francisco, CA",
+          "location_coordinates": {
+            "latitude": "37.7749° N",
+            "longitude": "122.4194° W"
+          },
+          "contactEmail": "contact@oceancleanup.org",
+          "gallery": [
+            {
+              "id": 1,
+              "imageUrl": "static/gallery1.jpg",
+              "caption": "Beach cleanup event 2023",
+              "date": "2023-12-15"
+            },
+            {
+              "id": 2,
+              "imageUrl": "static/gallery2.jpg",
+              "caption": "Volunteer team meeting",
+              "date": "2024-01-20"
+            },
+            {
+              "id": 3,
+              "imageUrl": "static/gallery3.jpg",
+              "caption": "Marine life protection",
+              "date": "2024-02-10"
+            },
+            {
+              "id": 4,
+              "imageUrl": "static/gallery4.jpg",
+              "caption": "Community outreach program",
+              "date": "2024-03-05"
+            }
+          ],
+          "clean_up_listing": [
+            {
+              "id": 1,
+              "date": "2023-12-15",
+              "location": "Ocean Beach",
+              "participants": 45,
+              "wasteCollected": "250kg",
+              "images": ["static/cleanup1.jpg", "static/cleanup2.jpg"],
+              "summary": "Successfully removed plastic waste and educated local community"
+            }
+          ],
+          "activity_summary": {
+            "total_cleanups": 12,
+            "total_waste_collected": "1500kg",
+            "total_participants": 450,
+            "areas_covered": ["Beach", "Ocean", "Coast"]
+          },
+          "team_listing": [
+            {
+              "id": 1,
+              "name": "John Doe",
+              "role": "Lead Coordinator",
+              "image": "static/team1.jpg",
+              "bio": "Environmental specialist with 10 years experience"
+            },
+            {
+              "id": 2,
+              "name": "Jane Smith",
+              "role": "Marine Biologist",
+              "image": "static/team2.jpg",
+              "bio": "Expert in marine ecosystems and conservation"
+            }
+          ],
+          "purchase_nft_info": {
+            "mint_count": "100",
+            "vote_count": "75",
+            "small_description": "Support ocean cleanup through NFTs",
+            "price": "0.1 ETH",
+            "blockchain": "Ethereum",
+            "benefits": ["Voting rights", "Event access"]
+          }
+        }
+    },
+    {
+      "id": 2,
+      "name": "River Protection Alliance",
+      "description": "Working to preserve and protect river ecosystems through regular cleanup activities and community education.",
+      "thumbnailUrl": "static/logo2.jpeg",
+      "cleanupDates": [
+        {
+          "date": "2024-11-10",
+          "location": "Sacramento River",
+          "expectedParticipants": 40
+        },
+        {
+          "date": "2024-12-05",
+          "location": "American River",
+          "expectedParticipants": 60
+        }
+      ],
+      "detailedInfo": {
+        "mission": "To ensure clean and healthy rivers for all",
+        "impact": "Prevented 300kg of waste from entering rivers in 2023",
+        "location_description": "Sacramento, CA",
+        "location_coordinates": {
+          "latitude": "38.5816° N",
+          "longitude": "121.4944° W"
+        },
+        "contactEmail": "info@riveralliance.org",
+        "gallery": [
+          {
+            "id": 1,
+            "imageUrl": "static/gallery5.jpg",
+            "caption": "River cleanup campaign",
+            "date": "2023-11-15"
+          },
+          {
+            "id": 2,
+            "imageUrl": "static/gallery6.jpg",
+            "caption": "Educational workshop",
+            "date": "2024-01-10"
+          },
+          {
+            "id": 3,
+            "imageUrl": "static/gallery7.jpg",
+            "caption": "Community engagement",
+            "date": "2024-02-20"
+          },
+          {
+            "id": 4,
+            "imageUrl": "static/gallery8.jpg",
+            "caption": "Wildlife protection",
+            "date": "2024-03-15"
+          }
+        ],
+        "clean_up_listing": [
+          {
+            "id": 1,
+            "date": "2023-11-15",
+            "location": "Sacramento River",
+            "participants": 35,
+            "wasteCollected": "180kg",
+            "images": ["static/cleanup3.jpg", "static/cleanup4.jpg"],
+            "summary": "Successful river cleanup with strong community participation"
+          }
+        ],
+        "activity_summary": {
+          "total_cleanups": 8,
+          "total_waste_collected": "1200kg",
+          "total_participants": 280,
+          "areas_covered": ["River", "Watershed", "Riverbank"]
+        },
+        "team_listing": [
+          {
+            "id": 1,
+            "name": "Sarah Johnson",
+            "role": "Project Manager",
+            "image": "static/team3.jpg",
+            "bio": "Dedicated to river conservation for 8 years"
+          },
+          {
+            "id": 2,
+            "name": "Mike Wilson",
+            "role": "Environmental Educator",
+            "image": "static/team4.jpg",
+            "bio": "Specializes in community education and outreach"
+          }
+        ],
+        "purchase_nft_info": {
+          "mint_count": "75",
+          "vote_count": "50",
+          "small_description": "Support river conservation through NFTs",
+          "price": "0.08 ETH",
+          "blockchain": "Ethereum",
+          "benefits": ["Community voting", "Special events"]
+        }
+      }
+    },
+    {
+        "id": 3,
+        "name": "Beach Cleanup Collective",
+        "description": "Community-driven organization focusing on beach cleanup events and marine life protection.",
+        "thumbnailUrl": "static/logo3.jpeg",
+        "cleanupDates": [
+          {
+            "date": "2024-04-15",
+            "location": "Venice Beach",
+            "expectedParticipants": 100
+          },
+          {
+            "date": "2024-07-20",
+            "location": "Santa Monica Beach",
+            "expectedParticipants": 85
+          }
+        ],
+        "detailedInfo": {
+          "mission": "To maintain pristine beaches through community action",
+          "impact": "Organized 24 successful beach cleanups in 2023",
+          "location_description": "Los Angeles, CA",
+          "location_coordinates": {
+            "latitude": "34.0522° N",
+            "longitude": "118.2437° W"
+          },
+          "contactEmail": "join@beachcollective.org",
+          "gallery": [
+            {
+              "id": 1,
+              "imageUrl": "static/gallery9.jpg",
+              "caption": "Cleanup crew at Venice Beach",
+              "date": "2023-08-20"
+            },
+            {
+              "id": 2,
+              "imageUrl": "static/gallery10.jpg",
+              "caption": "Marine life awareness event",
+              "date": "2024-03-15"
+            }
+          ],
+          "clean_up_listing": [
+            {
+              "id": 1,
+              "date": "2023-07-15",
+              "location": "Malibu Beach",
+              "participants": 120,
+              "wasteCollected": "350kg",
+              "images": ["static/cleanup5.jpg", "static/cleanup6.jpg"],
+              "summary": "Collected waste and promoted marine conservation"
+            }
+          ],
+          "activity_summary": {
+            "total_cleanups": 24,
+            "total_waste_collected": "2000kg",
+            "total_participants": 800,
+            "areas_covered": ["Beach", "Coastal Lines"]
+          },
+          "team_listing": [
+            {
+              "id": 1,
+              "name": "Liam Green",
+              "role": "Event Coordinator",
+              "image": "static/team5.jpg",
+              "bio": "Organizer of local environmental events"
+            },
+            {
+              "id": 2,
+              "name": "Emma Blue",
+              "role": "Marine Conservationist",
+              "image": "static/team6.jpg",
+              "bio": "Focuses on coastal ecosystems and biodiversity"
+            }
+          ],
+          "purchase_nft_info": {
+            "mint_count": "200",
+            "vote_count": "130",
+            "small_description": "Help keep our beaches clean through NFTs",
+            "price": "0.05 ETH",
+            "blockchain": "Polygon",
+            "benefits": ["Event invitations", "Volunteer recognition"]
+          }
+        }
+    },
+    {
+        "id": 4,
+        "name": "Coastal Conservation Team",
+        "description": "Expert team dedicated to protecting coastal ecosystems through regular cleanup operations and research.",
+        "thumbnailUrl": "static/logo4.jpeg",
+        "cleanupDates": [
+          {
+            "date": "2024-11-10",
+            "location": "La Jolla Cove",
+            "expectedParticipants": 45
+          },
+          {
+            "date": "2024-12-05",
+            "location": "Mission Beach",
+            "expectedParticipants": 65
+          }
+        ],
+        "detailedInfo": {
+          "mission": "To preserve coastal environments for future generations",
+          "impact": "Protected over 10 miles of coastline in 2023",
+          "location_description": "San Diego, CA",
+          "location_coordinates": {
+            "latitude": "32.7157° N",
+            "longitude": "117.1611° W"
+          },
+          "contactEmail": "info@coastalteam.org",
+          "gallery": [
+            {
+              "id": 1,
+              "imageUrl": "static/gallery11.jpg",
+              "caption": "La Jolla Cove cleanup",
+              "date": "2024-05-22"
+            },
+            {
+              "id": 2,
+              "imageUrl": "static/gallery12.jpg",
+              "caption": "Environmental awareness session",
+              "date": "2024-09-10"
+            }
+          ],
+          "clean_up_listing": [
+            {
+              "id": 1,
+              "date": "2023-09-05",
+              "location": "Mission Beach",
+              "participants": 60,
+              "wasteCollected": "400kg",
+              "images": ["static/cleanup7.jpg", "static/cleanup8.jpg"],
+              "summary": "Large-scale waste removal and coastal protection efforts"
+            }
+          ],
+          "activity_summary": {
+            "total_cleanups": 15,
+            "total_waste_collected": "2500kg",
+            "total_participants": 600,
+            "areas_covered": ["Coastline", "Wetlands", "Beach"]
+          },
+          "team_listing": [
+            {
+              "id": 1,
+              "name": "Oliver Black",
+              "role": "Head of Operations",
+              "image": "static/team7.jpg",
+              "bio": "Leads coastal conservation initiatives across California"
+            },
+            {
+              "id": 2,
+              "name": "Sophia White",
+              "role": "Research Specialist",
+              "image": "static/team8.jpg",
+              "bio": "Conducts research on coastal erosion and marine life"
+            }
+          ],
+          "purchase_nft_info": {
+            "mint_count": "150",
+            "vote_count": "95",
+            "small_description": "Support conservation through NFTs",
+            "price": "0.07 ETH",
+            "blockchain": "Solana",
+            "benefits": ["Monthly updates", "Special reports"]
+          }
+        }
+    }
+  ],
+  "totalImpactInfo": {
+    "total_cleanups": 45,
+    "total_waste_collected": "5000kg",
+    "total_participants": 1500,
+    "countries_active": 3,
+    "last_updated": "2024-03-20"
+  },
+  "footerInfo": {
+    "copyright_year": "2024",
+    "social_links": {
+      "twitter": "url",
+      "instagram": "url",
+      "linkedin": "url"
+    },
+    "contact_email": "info@example.com",
+    "organization_name": "AquaPurge"
+  }
+}

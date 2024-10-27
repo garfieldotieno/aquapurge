@@ -25,63 +25,44 @@ body {
 .navbar {
     background-color: #ffffff;
     padding: 10px 20px;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar-logo {
-    margin-left: 20px;
+    /* Left side */
+    display: flex;
+    align-items: center;
 }
 
-.logo {
+.navbar-logo .logo {
     height: 40px;
     width: auto;
-    border-radius: 5px;   
 }
 
-
 .navbar-donate {
-    margin-right: 20px;
+    /* Right side */
+    display: flex;
+    align-items: center;
 }
 
 .donate-btn {
     background-color: #007bff;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     font-weight: bold;
+    height: 40px;
 }
 
 .donate-btn:hover {
     background-color: #0056b3;
-}
-
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -95,19 +76,14 @@ header {
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
 }
 
 footer {
     flex-shrink: 0;
     text-align: center;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #333;
     color: #fff;
-}
-
-.centerdH2 {
-    text-align: center;
 }
 
 .summary-info {
@@ -170,42 +146,61 @@ footer {
     width: 300px;
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
-.org-container.vertical .org-card {
-    width: 80%;
-    max-width: 300px;
-}
-
-.org-card-content {
+.org-card-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
-.org-card-text {
-    flex: 1;
-    padding-right: 15px;
-}
-
-.org-card h3 {
-    margin-top: 0;
+.org-card-header h3 {
+    margin: 0;
     color: #333;
+    flex: 1;
 }
 
-.org-card p {
+.org-card-thumbnail {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.org-card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.org-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.org-description {
     color: #666;
-    margin-bottom: 10px;
+    margin: 0;
+}
+
+.next-cleanup, .last-cleanup {
+    font-style: italic;
+    margin: 0;
+    text-align: center;
 }
 
 .next-cleanup {
-    font-style: italic;
     color: #007bff;
 }
 
 .last-cleanup {
-    font-style: italic;
-    color: #28a745;  /* Green color for past cleanups */
+    color: #28a745;
 }
 
 .next-cleanup strong, .last-cleanup strong {
@@ -233,19 +228,6 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.org-card-thumbnail {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.org-card-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .more-btn {
     background-color: #007bff;
     color: white;
@@ -258,7 +240,6 @@ footer {
     width: 150px;
     height: 40px;
 }
-
 
 .more-btn:hover {
     background-color: #0056b3;
@@ -288,6 +269,8 @@ footer {
     transition: background-color 0.3s ease;
     font-weight: bold;
     margin-bottom: 20px;
+    width: 150px;
+    height: 40px;
 }
 
 .back-btn:hover {
@@ -299,4 +282,277 @@ footer {
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+/* OrgInfo Component Styles */
+.org-info {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Back Button Styling */
+.back-btn-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Common Card Styles */
+.info-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card 0: Main Info */
+.main-info-card {
+    grid-column: 1 / -1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.org-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.org-description {
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Card 1: Gallery */
+.gallery-card {
+    grid-column: 1 / -1;
+}
+
+.gallery-carousel {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gallery-carousel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Card 2: Impact */
+.impact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mission, .impact {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Card 3: Location */
+.location-card {
+    grid-column: 1 / -1;
+}
+
+.map-container {
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Card 4: Contact */
+.contact-card {
+    text-align: center;
+}
+
+/* Card 5: Activity Summary */
+.activity-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.metric {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.metric-value {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    color: #666;
+    text-transform: capitalize;
+}
+
+/* Card 6: Team */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.team-member .role {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Card 7: NFT */
+.nft-card {
+    text-align: center;
+}
+
+.nft-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.nft-stats span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Card 8: Cleanup Listing */
+.cleanup-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.cleanup-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.cleanup-item h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.cleanup-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Common Card Header Styles */
+.info-card h3 {
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .org-info {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .gallery-carousel img {
+        height: 200px;
+    }
+
+    .map-container {
+        height: 200px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #007bff, #00a5ff);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.main-header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.5em;
+}
+
+.main-header p {
+    margin: 0;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 30px 15px;
+    }
+
+    .main-header h1 {
+        font-size: 2em;
+    }
+
+    .main-header p {
+        font-size: 1em;
+    }
 }
