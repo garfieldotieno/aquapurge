@@ -25,7 +25,7 @@ body {
 .navbar {
     background-color: #ffffff;
     padding: 10px 20px;
-    border-bottom: 2px solid #333;
+    border-bottom: 4px solid #007bff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,13 +76,14 @@ header {
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 footer {
     flex-shrink: 0;
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
 }
 
@@ -553,6 +554,78 @@ footer {
     }
 
     .main-header p {
+        font-size: 1em;
+    }
+}
+
+/* Summary Section Styles */
+.summary {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.summary-title {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.summary-info {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.summary-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+
+.digital-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.label-value {
+    font-size: 1.2em;
+    color: #666;
+    text-transform: capitalize;
+}
+
+.summary-description {
+    color: #666;
+    font-size: 1.1em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .summary-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .summary-info-item {
+        min-width: unset;
+    }
+
+    .digital-value {
+        font-size: 2em;
+    }
+
+    .label-value {
         font-size: 1em;
     }
 }

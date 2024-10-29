@@ -3,7 +3,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src="static/aquapurge_logo.png" alt="Logo" className="logo" />
+                <img src="static/main/aquapurge_logo.png" alt="Logo" className="logo" />
             </div>
             <div className="navbar-donate">
                 <button className="donate-btn">Donate</button>
@@ -37,9 +37,9 @@ function SummaryInfo() {
 function SummarySection() {
     return (
         <section className="summary">
-            <h2>Summary</h2>
+            <h2 className="summary-title">Summary</h2>
             <SummaryInfo />
-            <p>This is a brief summary of our application's impact.</p>
+            
         </section>
     );
 }

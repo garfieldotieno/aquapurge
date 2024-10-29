@@ -4,7 +4,7 @@
         "id": 1,
         "name": "Ocean Cleanup Initiative",
         "description": "Dedicated to removing plastic waste from our oceans and preventing marine pollution through innovative cleanup systems.",
-        "thumbnailUrl": "static/logo1.jpeg",
+        "thumbnailUrl": "static/org1/logo1.jpeg",
         "cleanupDates": [
           {
             "date": "2024-04-15",
@@ -29,25 +29,25 @@
           "gallery": [
             {
               "id": 1,
-              "imageUrl": "static/gallery1.jpg",
+              "imageUrl": "static/org1/gallery1.jpg",
               "caption": "Beach cleanup event 2023",
               "date": "2023-12-15"
             },
             {
               "id": 2,
-              "imageUrl": "static/gallery2.jpg",
+              "imageUrl": "static/org1/gallery2.jpg",
               "caption": "Volunteer team meeting",
               "date": "2024-01-20"
             },
             {
               "id": 3,
-              "imageUrl": "static/gallery3.jpg",
+              "imageUrl": "static/org1/gallery3.jpg",
               "caption": "Marine life protection",
               "date": "2024-02-10"
             },
             {
               "id": 4,
-              "imageUrl": "static/gallery4.jpg",
+              "imageUrl": "static/org1/gallery4.jpg",
               "caption": "Community outreach program",
               "date": "2024-03-05"
             }
@@ -67,21 +67,21 @@
             "total_cleanups": 12,
             "total_waste_collected": "1500kg",
             "total_participants": 450,
-            "areas_covered": ["Beach", "Ocean", "Coast"]
+            "areas_covered": ["Beach"]
           },
           "team_listing": [
             {
               "id": 1,
               "name": "John Doe",
               "role": "Lead Coordinator",
-              "image": "static/team1.jpg",
+              "image": "static/org1/johndoe1.jpg",
               "bio": "Environmental specialist with 10 years experience"
             },
             {
               "id": 2,
               "name": "Jane Smith",
               "role": "Marine Biologist",
-              "image": "static/team2.jpg",
+              "image": "static/org1/janesmith1.jpg",
               "bio": "Expert in marine ecosystems and conservation"
             }
           ],
@@ -99,7 +99,7 @@
       "id": 2,
       "name": "River Protection Alliance",
       "description": "Working to preserve and protect river ecosystems through regular cleanup activities and community education.",
-      "thumbnailUrl": "static/logo2.jpeg",
+      "thumbnailUrl": "static/org2/logo2.jpeg",
       "cleanupDates": [
         {
           "date": "2024-11-10",
@@ -124,25 +124,25 @@
         "gallery": [
           {
             "id": 1,
-            "imageUrl": "static/gallery5.jpg",
+            "imageUrl": "static/org2/gallery5.jpg",
             "caption": "River cleanup campaign",
             "date": "2023-11-15"
           },
           {
             "id": 2,
-            "imageUrl": "static/gallery6.jpg",
+            "imageUrl": "static/org2/gallery6.jpg",
             "caption": "Educational workshop",
             "date": "2024-01-10"
           },
           {
             "id": 3,
-            "imageUrl": "static/gallery7.jpg",
+            "imageUrl": "static/org2/gallery7.jpg",
             "caption": "Community engagement",
             "date": "2024-02-20"
           },
           {
             "id": 4,
-            "imageUrl": "static/gallery8.jpg",
+            "imageUrl": "static/org2/gallery8.jpg",
             "caption": "Wildlife protection",
             "date": "2024-03-15"
           }
@@ -162,21 +162,21 @@
           "total_cleanups": 8,
           "total_waste_collected": "1200kg",
           "total_participants": 280,
-          "areas_covered": ["River", "Watershed", "Riverbank"]
+          "areas_covered": ["River"]
         },
         "team_listing": [
           {
             "id": 1,
             "name": "Sarah Johnson",
             "role": "Project Manager",
-            "image": "static/team3.jpg",
+            "image": "static/org2/sarahjohnson.jpg",
             "bio": "Dedicated to river conservation for 8 years"
           },
           {
             "id": 2,
             "name": "Mike Wilson",
             "role": "Environmental Educator",
-            "image": "static/team4.jpg",
+            "image": "static/org2/mikewilson.jpg",
             "bio": "Specializes in community education and outreach"
           }
         ],
@@ -194,7 +194,7 @@
         "id": 3,
         "name": "Beach Cleanup Collective",
         "description": "Community-driven organization focusing on beach cleanup events and marine life protection.",
-        "thumbnailUrl": "static/logo3.jpeg",
+        "thumbnailUrl": "static/org3/logo3.jpeg",
         "cleanupDates": [
           {
             "date": "2024-04-15",
@@ -219,13 +219,13 @@
           "gallery": [
             {
               "id": 1,
-              "imageUrl": "static/gallery9.jpg",
+              "imageUrl": "static/org3/gallery9.jpg",
               "caption": "Cleanup crew at Venice Beach",
               "date": "2023-08-20"
             },
             {
               "id": 2,
-              "imageUrl": "static/gallery10.jpg",
+              "imageUrl": "static/org3/gallery10.jpg",
               "caption": "Marine life awareness event",
               "date": "2024-03-15"
             }
@@ -245,21 +245,21 @@
             "total_cleanups": 24,
             "total_waste_collected": "2000kg",
             "total_participants": 800,
-            "areas_covered": ["Beach", "Coastal Lines"]
+            "areas_covered": ["Beach"]
           },
           "team_listing": [
             {
               "id": 1,
               "name": "Liam Green",
               "role": "Event Coordinator",
-              "image": "static/team5.jpg",
+              "image": "static/org3/johndoe1.jpg",
               "bio": "Organizer of local environmental events"
             },
             {
               "id": 2,
               "name": "Emma Blue",
               "role": "Marine Conservationist",
-              "image": "static/team6.jpg",
+              "image": "static/org3/sarah.jpg",
               "bio": "Focuses on coastal ecosystems and biodiversity"
             }
           ],
@@ -277,7 +277,7 @@
         "id": 4,
         "name": "Coastal Conservation Team",
         "description": "Expert team dedicated to protecting coastal ecosystems through regular cleanup operations and research.",
-        "thumbnailUrl": "static/logo4.jpeg",
+        "thumbnailUrl": "static/org4/logo4.jpeg",
         "cleanupDates": [
           {
             "date": "2024-11-10",
@@ -302,13 +302,13 @@
           "gallery": [
             {
               "id": 1,
-              "imageUrl": "static/gallery11.jpg",
+              "imageUrl": "static/org4/gallery11.jpg",
               "caption": "La Jolla Cove cleanup",
               "date": "2024-05-22"
             },
             {
               "id": 2,
-              "imageUrl": "static/gallery12.jpg",
+              "imageUrl": "static/org4/gallery12.jpg",
               "caption": "Environmental awareness session",
               "date": "2024-09-10"
             }
@@ -328,21 +328,21 @@
             "total_cleanups": 15,
             "total_waste_collected": "2500kg",
             "total_participants": 600,
-            "areas_covered": ["Coastline", "Wetlands", "Beach"]
+            "areas_covered": ["Coastline"]
           },
           "team_listing": [
             {
               "id": 1,
               "name": "Oliver Black",
               "role": "Head of Operations",
-              "image": "static/team7.jpg",
+              "image": "static/org4/mikewilson.jpg",
               "bio": "Leads coastal conservation initiatives across California"
             },
             {
               "id": 2,
               "name": "Sophia White",
               "role": "Research Specialist",
-              "image": "static/team8.jpg",
+              "image": "static/org4/sarahjohnson.jpg",
               "bio": "Conducts research on coastal erosion and marine life"
             }
           ],
@@ -371,7 +371,7 @@
       "instagram": "url",
       "linkedin": "url"
     },
-    "contact_email": "info@example.com",
+    "contact_email": "info@aquapurge.org",
     "organization_name": "AquaPurge"
   }
 }
