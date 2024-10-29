@@ -653,6 +653,13 @@ footer {
 }
 
 /* Center all headings in OrgInfoComponent */
+
+/* org heading */
+.centerdH2{
+    text-align: center;
+}
+
+
 .org-info h2,
 .org-info h3 {
     text-align: center;
@@ -661,3 +668,26 @@ footer {
     padding-bottom: 10px;
     border-bottom: 2px solid #007bff;
 }
+
+.footer-social {
+    display: flex;
+    justify-content: space-around; /* or use space-between for different spacing */
+    align-items: center;
+    margin: 10px 0; /* Optional: Add some margin for spacing */
+}
+
+.footer-social a {
+    color: white; /* Ensure the links are visible against the footer background */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px 10px; /* Optional: Add some padding for better click area */
+    transition: color 0.3s; /* Optional: Add a transition for hover effect */
+}
+
+.footer-social a:hover {
+    color: #00a5ff; /* Change color on hover for better UX */
+}
+
+.lower-centerd {
+    
+}
+

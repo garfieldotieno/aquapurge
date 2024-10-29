@@ -165,6 +165,7 @@ function OrgContainer({ onOrgSelect }) {
     );
 }
 
+
 // Main section component
 function MainSection({ onOrgSelect }) {
     return (
@@ -278,6 +279,32 @@ function OrgInfoComponent({ org, onBack }) {
                 <p className="impact">{org.detailedInfo.impact}</p>
             </div>
 
+            {/* Card 7: NFT */}
+            <div className="info-card nft-card">
+                <h3>NFT Information</h3>
+                <p>{org.detailedInfo.purchase_nft_info.small_description}</p>
+                <div className="nft-stats">
+                    <span>Mints: {org.detailedInfo.purchase_nft_info.mint_count}</span>
+                    <span>Votes: {org.detailedInfo.purchase_nft_info.vote_count}</span>
+                </div>
+            </div>
+
+            {/* Card 8: Cleanup Listing */}
+            <div className="info-card cleanup-card">
+                <h3>Clean-up History</h3>
+                <div className="cleanup-list">
+                    {org.detailedInfo.clean_up_listing.map(cleanup => (
+                        <div key={cleanup.id} className="cleanup-item">
+                            <h4>{cleanup.location}</h4>
+                            <p>Date: {cleanup.date}</p>
+                            <p>Participants: {cleanup.participants}</p>
+                            <p>Waste Collected: {cleanup.wasteCollected}</p>
+                            <p>{cleanup.summary}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             {/* Card 3: Location */}
             <div className="info-card location-card">
                 <h3>Location</h3>
@@ -286,7 +313,9 @@ function OrgInfoComponent({ org, onBack }) {
                     {/* Map implementation will go here */}
                 </div>
             </div>
-
+            
+            
+            
             {/* Card 4: Contact */}
             <div className="info-card contact-card">
                 <h3>Contact</h3>
@@ -320,31 +349,9 @@ function OrgInfoComponent({ org, onBack }) {
                 </div>
             </div>
 
-            {/* Card 7: NFT */}
-            <div className="info-card nft-card">
-                <h3>NFT Information</h3>
-                <p>{org.detailedInfo.purchase_nft_info.small_description}</p>
-                <div className="nft-stats">
-                    <span>Mints: {org.detailedInfo.purchase_nft_info.mint_count}</span>
-                    <span>Votes: {org.detailedInfo.purchase_nft_info.vote_count}</span>
-                </div>
-            </div>
-
-            {/* Card 8: Cleanup Listing */}
-            <div className="info-card cleanup-card">
-                <h3>Clean-up History</h3>
-                <div className="cleanup-list">
-                    {org.detailedInfo.clean_up_listing.map(cleanup => (
-                        <div key={cleanup.id} className="cleanup-item">
-                            <h4>{cleanup.location}</h4>
-                            <p>Date: {cleanup.date}</p>
-                            <p>Participants: {cleanup.participants}</p>
-                            <p>Waste Collected: {cleanup.wasteCollected}</p>
-                            <p>{cleanup.summary}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            
+            
+            
         </div>
     );
 }
@@ -359,13 +366,10 @@ function App() {
             <Navbar />
             <div className="content-wrapper">
                 {selectedOrg ? (
-                    <OrgInfoComponent 
-                        org={selectedOrg} 
-                        onBack={() => setSelectedOrg(null)} 
+                    <OrgInfoComponent org={selectedOrg} onBack={() => setSelectedOrg(null)} 
                     />
                 ) : (
                     <div>
-                        
                         <SummarySection />
                         <MainSection onOrgSelect={setSelectedOrg} />
                     </div>
