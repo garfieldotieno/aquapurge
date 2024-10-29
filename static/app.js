@@ -217,6 +217,18 @@ function FooterSection() {
 
 // OrgInfoComponent
 function OrgInfoComponent({ org, onBack }) {
+    React.useEffect(() => {
+        if (org && org.detailedInfo && org.detailedInfo.gallery) {
+            new Splide('.splide', {
+                type: 'loop',
+                perPage: 1,
+                autoplay: true,
+                interval: 3000,
+                pauseOnHover: true,
+            }).mount();
+        }
+    }, [org]);
+
     if (!org || !org.detailedInfo) {
         return (
             <div className="org-info">
@@ -246,11 +258,16 @@ function OrgInfoComponent({ org, onBack }) {
             {/* Card 1: Image Gallery */}
             <div className="info-card gallery-card">
                 <h3>Gallery</h3>
-                <div className="gallery-carousel">
-                    {/* Splide implementation will go here */}
-                    {org.detailedInfo.gallery.map(image => (
-                        <img key={image.id} src={image.imageUrl} alt={image.caption} />
-                    ))}
+                <div className="splide">
+                    <div className="splide__track">
+                        <ul className="splide__list">
+                            {org.detailedInfo.gallery.map(image => (
+                                <li className="splide__slide" key={image.id}>
+                                    <img src={image.imageUrl} alt={image.caption} />
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -331,7 +348,6 @@ function OrgInfoComponent({ org, onBack }) {
         </div>
     );
 }
-
 
 
 // Main App component

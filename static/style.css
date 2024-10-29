@@ -247,17 +247,15 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* OrgInfo Component Styles */
 .org-info {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f0f0f0;  /* Light gray background */
-    z-index: 1000;
-    overflow-y: auto;
     padding: 20px;
-    box-sizing: border-box;
+    width: 100%; /* Ensure full width */
+    max-width: none; /* Remove max-width constraint */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .back-btn {
@@ -288,7 +286,8 @@ footer {
 /* OrgInfo Component Styles */
 .org-info {
     padding: 20px;
-    max-width: 1200px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -628,4 +627,37 @@ footer {
     .label-value {
         font-size: 1em;
     }
+}
+
+/* Splide styles */
+.splide {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.splide__slide {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.splide__slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Center all headings in OrgInfoComponent */
+.org-info h2,
+.org-info h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
 }
